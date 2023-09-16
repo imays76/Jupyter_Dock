@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jupyter_dock
+    container_name: jupyter_dock
+    ports:
+      - 8822:22
+    volumes:
+      - .:/works/Jupyter_Dock
+    working_dir: /works/Jupyter_Dock
